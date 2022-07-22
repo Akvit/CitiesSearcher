@@ -31,9 +31,19 @@ android {
 
 dependencies {
 
+    implementation "androidx.core:core-ktx:$versions.androidx"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines"
     implementation project(":domain")
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.6.1'
+    //gson
+    implementation "com.google.code.gson:gson:$versions.gson"
+
+    //koin
+    implementation "org.koin:koin-android:$versions.koin"
+    implementation "org.koin:koin-androidx-scope:$versions.koin"
+
+    //Test
+    testImplementation "org.mockito:mockito-core:$versions.mockito"
+    testImplementation "junit:junit:$versions.junit"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutines"
 }
