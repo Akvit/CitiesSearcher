@@ -7,3 +7,16 @@ java {
     sourceCompatibility = JavaVersion.VERSION_1_7
     targetCompatibility = JavaVersion.VERSION_1_7
 }
+
+dependencies {
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines"
+
+    //koin
+    implementation "org.koin:koin-android:$versions.koin"
+    implementation "org.koin:koin-androidx-scope:$versions.koin"
+
+    //Test
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutines"
+    testImplementation "junit:junit:$versions.junit"
+    testImplementation "org.mockito:mockito-core:$versions.mockito"
+}
