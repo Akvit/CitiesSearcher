@@ -38,9 +38,10 @@ dependencies {
     //gson
     implementation "com.google.code.gson:gson:$versions.gson"
 
-    //koin
-    implementation "org.koin:koin-android:$versions.koin"
-    implementation "org.koin:koin-androidx-scope:$versions.koin"
+    // Koin
+    implementation "io.insert-koin:koin-core:$versions.koin"
+    implementation "io.insert-koin:koin-android:$versions.koin"
+    testImplementation "io.insert-koin:koin-test:$versions.koin"
 
     //Test
     testImplementation "org.mockito:mockito-core:$versions.mockito"

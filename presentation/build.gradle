@@ -27,13 +27,37 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+    }
+
 }
 
 dependencies {
 
     implementation project(":domain")
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.6.1'
+    implementation "androidx.core:core-ktx:$versions.androidx"
+    implementation "androidx.appcompat:appcompat:$versions.appcompat"
+    implementation "com.google.android.material:material:$versions.material"
+
+    // Koin
+    implementation "io.insert-koin:koin-core:$versions.koin"
+    implementation "io.insert-koin:koin-android:$versions.koin"
+    testImplementation "io.insert-koin:koin-test:$versions.koin"
+
+    //coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutines"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecyleViewModel"
+
+    //Test
+    testImplementation "junit:junit:$versions.junit"
+    androidTestImplementation "androidx.test.ext:junit:$versions.junit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espresso"
+    testImplementation "org.mockito:mockito-core:$versions.mockito"
+    testImplementation "org.mockito.kotlin:mockito-kotlin:$versions.mockitoKotlin"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutines"
+    testImplementation "androidx.arch.core:core-testing:$versions.coreTesting"
 }
